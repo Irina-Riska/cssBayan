@@ -1,3 +1,7 @@
+@import url(./screen_820.css);
+@import url(./screen_1200+.css);
+
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -19,11 +23,13 @@ legend {
 /*Accordions style*/
 
 .accordion {
+    max-width: 100vw;
     margin-bottom: 1px;
     width: 100%;
     color: white;
     overflow: hidden;
     background: rgb(114, 174, 174);
+    padding: 5rem;
 }
 
 .accordion input {
@@ -40,14 +46,19 @@ legend {
     font-weight: bold;
     line-height: 3;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: all 0.3s;
 }
 
 .accordion__content {
     max-height: 0;
+    display: flex;
+    justify-content: center;
     overflow: hidden;
     background: rgba (0, 0, 0, 0.1);
     transition: all .3s;
+}
+.accordion__content img{
+    max-width: 100%;
 }
 
 .accordion__content p {
@@ -57,8 +68,9 @@ legend {
 input:checked~.accordion__content {
     max-height: 100vh;
 }
+input:checked~.accordion__label{
+    color: red  ;
+}
 
 
-/* .accordion__label:hover {
-    background: rgba (0, 0, 0, 0.1);
-} */
+
