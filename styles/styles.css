@@ -89,6 +89,7 @@ input[type=radio]:checked+span.fa {
     transition: all .3s ease-in-out;
 }
 
+
 body:hover {
     background-color: rgba(128, 128, 128, 0.286);
     color: red;
