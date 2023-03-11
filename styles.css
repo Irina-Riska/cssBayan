@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: medium;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(57, 74, 74);
+    background: rgb(226, 221, 217);
+}
+
+legend {
+    text-align: center;
+    font-weight: bold;
+}
+
+/*Accordions style*/
+
+.accordion {
+    margin-bottom: 1px;
+    width: 100%;
+    color: white;
+    overflow: hidden;
+    background: rgb(114, 174, 174);
+}
+
+.accordion input {
+    display: none;
+    opacity: 0;
+    z-index: -1;
+}
+
+
+.accordion label {
+    display: block;
+    padding: 0 0 0 1rem;
+    background: rgb(33, 131, 138);
+    font-weight: bold;
+    line-height: 3;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.accordion__content {
+    max-height: 0;
+    overflow: hidden;
+    background: rgba (0, 0, 0, 0.1);
+    transition: all .3s;
+}
+
+.accordion__content p {
+    margin: 1rem;
+}
+
+input:checked~.accordion__content {
+    max-height: 100vh;
+}
+
+
+/* .accordion__label:hover {
+    background: rgba (0, 0, 0, 0.1);
+} */
