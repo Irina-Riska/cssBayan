@@ -2,4 +2,7 @@
     *{
         background-color: rgba(255, 0, 0, 0.399);
     }
+
+    *{
+        font-size: small;    }
 }

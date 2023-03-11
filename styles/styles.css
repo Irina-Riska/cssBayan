@@ -1,5 +1,5 @@
-@import url(./screen_820.css);
-@import url(./screen_1200+.css);
+@import './screen_820.css';
+@import './screen_1200+.css';
 
 
 * {
@@ -9,15 +9,19 @@
 }
 
 body {
-    font-size: medium;
+    font-size: 62.5%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(57, 74, 74);
     background: rgb(226, 221, 217);
 }
 
 legend {
-    text-align: center;
+    text-align: center;    
+}
+
+strong {
     font-weight: bold;
+    font-size: x-large;
 }
 
 /*Accordions style*/
@@ -41,12 +45,12 @@ legend {
 
 .accordion label {
     display: block;
-    padding: 0 0 0 1rem;
+   padding: 0 2rem;
     background: rgb(33, 131, 138);
     font-weight: bold;
     line-height: 3;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: all 0.3s ease-in-out;
 }
 
 .accordion__content {
@@ -68,9 +72,28 @@ legend {
 input:checked~.accordion__content {
     max-height: 100vh;
 }
-input:checked~.accordion__label{
+
+/* input:checked~.accordion__label{
     color: red  ;
+} */
+
+/* 
+input:checked~.icon{
+    color: green  ;
+} */
+
+
+input[type=radio]:checked+span.fa {
+    color: red;
+    transform: rotate(90deg);
+    transition: all .3s ease-in-out;
 }
 
+body:hover {
+    background-color: rgba(128, 128, 128, 0.286);
+    color: red;
+}
 
-
+body:hover .tab {
+    color: #2c3e50;
+}
