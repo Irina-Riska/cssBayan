@@ -1,6 +1,3 @@
-@import './screen_820.css';
-@import './screen_1200+.css';
-
 
 * {
     box-sizing: border-box;
@@ -9,7 +6,7 @@
 }
 
 body {
-    font-size: 62.5%;
+    font-size: 1rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(57, 74, 74);
     background: rgb(226, 221, 217);
@@ -21,7 +18,7 @@ legend {
 
 strong {
     font-weight: bold;
-    font-size: x-large;
+    font-size: 2.0rem;
 }
 
 /*Accordions style*/
@@ -33,7 +30,7 @@ strong {
     color: white;
     overflow: hidden;
     background: rgb(114, 174, 174);
-    padding: 5rem;
+    padding: 1rem;
 }
 
 .accordion input {
@@ -45,12 +42,16 @@ strong {
 
 .accordion label {
     display: block;
-   padding: 0 2rem;
+    padding: 0 2rem;
     background: rgb(33, 131, 138);
     font-weight: bold;
     line-height: 3;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+}
+
+.fa {
+    float: right;
 }
 
 .accordion__content {
@@ -73,16 +74,6 @@ input:checked~.accordion__content {
     max-height: 100vh;
 }
 
-/* input:checked~.accordion__label{
-    color: red  ;
-} */
-
-/* 
-input:checked~.icon{
-    color: green  ;
-} */
-
-
 input[type=radio]:checked+span.fa {
     color: red;
     transform: rotate(90deg);
@@ -90,11 +81,44 @@ input[type=radio]:checked+span.fa {
 }
 
 
+.accordion__label:hover .accordion__content {
+    max-height: 100vh;
+}
 body:hover {
     background-color: rgba(128, 128, 128, 0.286);
     color: red;
 }
 
-body:hover .tab {
+body:hover .accordion {
     color: #2c3e50;
+}
+
+.accordion__content {
+    transition: all 1s;
+}
+
+.accordion__content:hover {
+    transform: scale(1.05);
+   }
+
+
+@media screen and (min-width:820px) and (max-width:1199px) {
+   
+    body{
+        font-size: 1.4rem;}
+
+    .accordion {
+       padding: 5rem;
+    }
+
+}
+@media only screen and (min-width:1200px) {
+      
+    body{
+        font-size: 1.6rem;}
+
+    .accordion {
+         padding: 5rem;
+    }
+    
 }
