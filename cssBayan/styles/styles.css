@@ -1,0 +1,124 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(57, 74, 74);
+    background: rgb(226, 221, 217);
+}
+
+legend {
+    text-align: center;    
+}
+
+strong {
+    font-weight: bold;
+    font-size: 2.0rem;
+}
+
+/*Accordions style*/
+
+.accordion {
+    max-width: 100vw;
+    margin-bottom: 1px;
+    width: 100%;
+    color: white;
+    overflow: hidden;
+    background: rgb(114, 174, 174);
+    padding: 1rem;
+}
+
+.accordion input {
+    display: none;
+    opacity: 0;
+    z-index: -1;
+}
+
+
+.accordion label {
+    display: block;
+    padding: 0 2rem;
+    background: rgb(33, 131, 138);
+    font-weight: bold;
+    line-height: 3;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.fa {
+    float: right;
+}
+
+.accordion__content {
+    max-height: 0;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    background: rgba (0, 0, 0, 0.1);
+    transition: all .3s;
+}
+.accordion__content img{
+    max-width: 100%;
+}
+
+.accordion__content p {
+    margin: 1rem;
+}
+
+input:checked~.accordion__content {
+    max-height: 100vh;
+}
+
+input[type=radio]:checked+span.fa {
+    color: red;
+    transform: rotate(90deg);
+    transition: all .3s ease-in-out;
+}
+
+
+.accordion__label:hover .accordion__content {
+    max-height: 100vh;
+}
+body:hover {
+    background-color: rgba(128, 128, 128, 0.286);
+    color: red;
+}
+
+body:hover .accordion {
+    color: #2c3e50;
+}
+
+.accordion__content {
+    transition: all 1s;
+}
+
+.accordion__content:hover {
+    transform: scale(1.05);
+   }
+
+
+@media screen and (min-width:820px) and (max-width:1199px) {
+   
+    body{
+        font-size: 1.4rem;}
+
+    .accordion {
+       padding: 5rem;
+    }
+
+}
+@media only screen and (min-width:1200px) {
+      
+    body{
+        font-size: 1.6rem;}
+
+    .accordion {
+         padding: 5rem;
+    }
+    
+}
